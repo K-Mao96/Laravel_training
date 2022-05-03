@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//login
+Route::get('/login', [CertificationController::class,'index']);
+
+//hello
 Route::get('/hello', [HelloController::class,'index']);
 Route::post('/hello', [HelloController::class,'create']);
 Route::post('/hello_done', [HelloController::class,'hello_done']);
