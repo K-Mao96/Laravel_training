@@ -4,6 +4,6 @@
         <p>{{ $message }}</p>
     @endif
 
-    <p><a href="/login" class="btn">入力し直す</a></p>
+    <p><a href="/login" class="btn">ログアウト</a></p>
 
 @include('share.footer')

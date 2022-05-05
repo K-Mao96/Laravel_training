@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\CertificationController;
+use App\Http\Controllers\RegistrationController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +21,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//member_add
+Route::get('/registration', [RegistrationController::class,'index']);
+Route::post('/registration', [RegistrationController::class,'add']);
+
 //login
 Route::get('/login', [CertificationController::class,'index']);
 Route::post('/login', [CertificationController::class,'certification']);
+
 
 
 //hello
